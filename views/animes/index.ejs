@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+
+<div class="container">
+
+ <header class="jumbotron">
+ <h1>The best anime in the web</h1>
+ <p>View animes post</p>
+ <p><a class= "btn btn-primary" href="/animes/new">Add new post</a> </p>
+ </header>
+
+   <div class="row text-center" style="dispay:flex; flex-wrap; wrap;"> 
+<% animes.forEach(function (anime) { %>
+  <div class="col-md-3 col-sm-6"> 
+  <div class="thumbnail"> 
+  <img src = "<%= anime.image %>">
+  <div class="caption"> 
+  <h4> <%= anime.name %><h4>  
+  </div>
+  <p>
+  <a class= "btn btn-primary" href="/animes/<%= anime._id %>">More Info</a>
+  </p>
+  </div>
+   
+  
+  </div>
+<% })%>
+</div>
+
+ 
+</div>
+<% include ../partials/footer %>

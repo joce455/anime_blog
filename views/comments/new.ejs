@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+	<div class="container">
+		<div class="row">
+	<h1 style="text-align: center">Add a new comment to <%= anime.name %></h1>
+	<div style="width: 30%; margin:0 auto">
+	<form action="/animes/<%= anime._id %>/comments" method="POST">
+	    	<div class="form-group">
+		<input  class= "form-control" type="textarea" placeholder="comment" name="comment[text]">
+		</div>
+	
+		<button class="btn btn-lg btn-primary btn-block" type="submit" >Create comment</button>
+	</form>
+	 <a href="/animes/<%= anime._id %>"> Go back</a>
+	</div>
+	</div>
+	<% include ../partials/footer %>
